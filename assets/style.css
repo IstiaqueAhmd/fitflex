@@ -1,0 +1,171 @@
+/* FitFlex Polished Modern CSS */
+:root {
+    --primary: #667eea;
+    --secondary: #764ba2;
+    --accent: #ff6b6b;
+    --yellow: #ffeb3b;
+    --success: #4caf50;
+    --danger: #f44336;
+    --white: #fff;
+    --dark: #222;
+    --card-bg: rgba(255,255,255,0.13);
+    --blur: blur(8px);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    min-height: 100vh;
+    color: var(--white);
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 32px;
+}
+header {
+    background: var(--card-bg);
+    backdrop-filter: var(--blur);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--white);
+    letter-spacing: 2px;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+.nav-links {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+}
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.2s, color 0.2s;
+    font-weight: 500;
+}
+.nav-links a:hover {
+    background: var(--accent);
+    color: var(--white);
+}
+.btn, .action-btn, .add-btn, .book-trainer-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    background: var(--accent);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.2s, box-shadow 0.2s;
+    margin: 0 10px;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+}
+.btn-secondary {
+    background: transparent;
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+.btn:hover, .action-btn:hover, .add-btn:hover, .book-trainer-btn:hover {
+    background: #ff5252;
+    color: var(--white);
+}
+.card, .feature-card, .trainer-card, .add-money-card, .transaction-card, .booking-card, .slot-card, .login-container, .register-container {
+    background: var(--card-bg);
+    backdrop-filter: var(--blur);
+    padding: 2rem 1.5rem;
+    border-radius: 15px;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+}
+input, select, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255,255,255,0.18);
+    color: var(--white);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    outline: none;
+    transition: background 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+    background: rgba(255,255,255,0.28);
+}
+input::placeholder, textarea::placeholder {
+    color: rgba(255,255,255,0.7);
+}
+.success-message, .success {
+    background: rgba(76, 175, 80, 0.18);
+    border: 1px solid var(--success);
+    color: var(--white);
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1.2rem;
+    text-align: center;
+    font-size: 1rem;
+}
+.error, .error-message {
+    background: rgba(255, 0, 0, 0.18);
+    padding: 0.75rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    text-align: center;
+    color: var(--white);
+    font-size: 1rem;
+}
+.wallet-balance {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--success);
+    text-align: center;
+    margin: 1rem 0;
+}
+form {
+    margin-top: 1rem;
+}
+label {
+    color: var(--white);
+    font-weight: 500;
+    margin-bottom: 0.3rem;
+    display: block;
+}
+.links {
+    text-align: center;
+    margin-top: 1rem;
+}
+.links a {
+    color: var(--yellow);
+    text-decoration: none;
+    font-weight: 500;
+}
+.links a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 900px) {
+    .container { max-width: 98vw; padding: 0 10px; }
+    .nav-links { gap: 0.7rem; }
+}
+@media (max-width: 600px) {
+    .container { padding: 0 5px; }
+    .nav-links { flex-direction: column; gap: 0.5rem; }
+    .logo { font-size: 1.3rem; }
+    .card, .feature-card, .trainer-card, .add-money-card, .transaction-card, .booking-card, .slot-card, .login-container, .register-container { padding: 1rem; }
+}
